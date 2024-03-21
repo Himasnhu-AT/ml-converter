@@ -1,0 +1,35 @@
+# ML Model Configuration
+model:
+  name: "Example Model" # Name of the model
+  type: "classification" # Type of ML task (e.g., classification, regression, etc.)
+
+# Dataset Configuration
+dataset:
+  name: "Example Dataset" # Name of the dataset
+  path: "/path/to/dataset.csv" # Path to the dataset file
+  features: # Features used for training
+    - feature1
+    - feature2
+    - feature3
+  target: "target_variable" # Target variable to predict
+
+# Model Parameters
+parameters:
+  algorithm: "RandomForestClassifier" # ML algorithm to use
+  hyperparameters: # Hyperparameters for the chosen algorithm
+    n_estimators: 100
+    max_depth: 5
+    min_samples_split: 2
+
+# Training Configuration
+training:
+  test_size: 0.2 # Percentage of data to use for testing
+  random_state: 42 # Random seed for reproducibility
+
+# Evaluation Configuration
+evaluation:
+  metrics: # Performance metrics to evaluate the model
+    - accuracy
+    - precision
+    - recall
+    - f1_score
