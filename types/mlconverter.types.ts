@@ -1,4 +1,4 @@
-interface MLModelConfiguration {
+export interface MLModelConfiguration {
   model: {
     name: string;
     type: string;

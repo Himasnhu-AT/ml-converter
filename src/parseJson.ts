@@ -1,6 +1,7 @@
 import * as fs from "fs";
+import { MLModelConfiguration } from "../types/mlconverter.types";
 
-function parseJson(filePath: string): any {
+export function parseJson(filePath: string): any {
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     try {

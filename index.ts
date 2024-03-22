@@ -1,3 +1,7 @@
+import { RenderCode } from "./src/renderCode";
+import { MLModelConfiguration } from "./types/mlconverter.types";
+
+// longitude	latitude	housing_median_age	total_rooms	total_bedrooms	population	households	median_income	median_house_value
 const mlModelConfiguration: MLModelConfiguration = {
   model: {
     name: "Example Model",
@@ -5,8 +9,18 @@ const mlModelConfiguration: MLModelConfiguration = {
   },
   dataset: {
     name: "Example Dataset",
-    path: "/path/to/dataset.csv",
-    features: ["feature1", "feature2", "feature3"],
+    path: "/content/sample_data/california_housing_train.csv",
+    features: [
+      "longitude",
+      "latitude",
+      "housing_median_age",
+      "total_rooms",
+      "total_bedrooms",
+      "population",
+      "households",
+      "median_income",
+      "median_house_value",
+    ],
     target: "target_variable",
   },
   parameters: {
@@ -25,3 +39,5 @@ const mlModelConfiguration: MLModelConfiguration = {
     metrics: ["accuracy", "precision", "recall", "f1_score"],
   },
 };
+
+console.log(RenderCode(mlModelConfiguration));

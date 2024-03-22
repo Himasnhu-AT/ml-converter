@@ -2,11 +2,12 @@
   "name": "ml-converter",
   "version": "1.0.0",
   "description": "v1 of ML converter. take JSON and parse ML model based on it",
-  "main": "index.js",
+  "main": "dist/index.js",
   "module": "commonjs",
   "scripts": {
-    "test": "jest",
-    "build": "tsc"
+    "dev": "node dist/index.js",
+    "build": "tsc",
+    "test": "jest"
   },
   "author": "himasnhu-at <git>",
   "license": "MIT",
